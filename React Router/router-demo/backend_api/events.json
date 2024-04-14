@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "title": "enrique iglesias concert",
+      "image": "https://imgs.search.brave.com/cQD3fQ0YJKepp79lkAADRPwzbiRbWTjXVRiyAewV00M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubGl2ZW5hdGlv/bmNkbi5jb20vdXBs/b2Fkcy83MTc1ZTZl/OS01ODdkLTRiMTgt/OWZkOC1lNjlhYjVl/NTE5YjkuanBnP2F1/dG89d2VicCZxdWFs/aXR5PTcwJndpZHRo/PTEzMTk",
+      "date": "1231-12-23",
+      "description": "was full of joy and enchatment",
+      "id": "120d1f34-f31f-48cf-aebd-e55f636a058d"
+    },
+    {
+      "title": "sonu nigham concert",
+      "image": "https://imgs.search.brave.com/RpOg6vSpZ6UsVd8-ixoBrARW-M6az8IuB1Jy60xCF3k/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4t/YXouYWxsZXZlbnRz/LmluL2V2ZW50czIv/YmFubmVycy8xNmQ4/ZjYyMC1jNGUwLTEx/ZWUtYmZiZi1hZDEx/ZmU1MDBhN2Mtcmlt/Zy13MzAwLWgzMDAt/Z21pci5qcGc_dj0x/NzA3MjE3NzI1",
+      "date": "2312-12-12",
+      "description": "sonu nigham concert",
+      "id": "43ff1fc1-c317-41f4-8d15-20e953d5505a"
+    },
+    {
+      "id": "e1",
+      "title": "A dummy event",
+      "date": "2023-02-22",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "Join this amazing event and connect with fellow developers."
+    }
+  ]
+}
