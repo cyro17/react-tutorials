@@ -1,5 +1,60 @@
 {
-  "users": [{ "id": 1, "name": "cyro" }],
-  "albums": [],
+  "users": [
+    {
+      "id": "1",
+      "name": "cyro"
+    },
+    {
+      "id": "2",
+      "name": "ronit"
+    },
+    {
+      "id": "3",
+      "name": "bot"
+    },
+    {
+      "id": "e12d",
+      "name": "Tammy Reilly"
+    },
+    {
+      "id": "879b",
+      "name": "Floyd Wisoky"
+    },
+    {
+      "id": "aa76",
+      "name": "Edmund McDermott"
+    },
+    {
+      "id": "f6a7",
+      "name": "Brandi Schmeler DVM"
+    },
+    {
+      "id": "01a9",
+      "name": "Russell Fritsch"
+    },
+    {
+      "id": "889d",
+      "name": "Stacy Runte"
+    },
+    {
+      "id": "c455",
+      "name": "Eva Dicki"
+    },
+    {
+      "id": "8cbc",
+      "name": "Kim Collier V"
+    },
+    {
+      "id": "7a89",
+      "name": "Grant Stehr"
+    }
+  ],
+  "albums": [
+    {
+      "id": "10",
+      "title": "Hiking Trip",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
