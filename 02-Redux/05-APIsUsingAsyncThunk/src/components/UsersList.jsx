@@ -28,9 +28,7 @@ function UsersList() {
   } else if (loadingUsersError) {
     content = <div>Error fetching data...</div>;
   } else {
-    content = data.map((user) => {
-      return <UsersListItem key={user.id} user={user} />;
-    });
+    content = data.map((user) => <UsersListItem key={user.id} user={user} />);
   }
 
   return (

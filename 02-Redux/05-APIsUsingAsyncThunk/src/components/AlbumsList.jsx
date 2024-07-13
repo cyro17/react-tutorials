@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useAddAlbumMutation, useFetchAlbumsQuery } from "../store";
-import Button from "./Button";
-import ExpandablePanel from "./ExpandablePanel";
 import Skeleton from "./Skeleton";
+import { useAddAlbumMutation, useFetchAlbumsQuery } from "../store";
+
+import Button from "./Button";
+
+import AlbumListItem from "./AlbumListItem";
 
 function AlbumsList({ user }) {
-  const { data, error, isLoading } = useFetchAlbumsQuery();
+  const { data, error, isFetching } = useFetchAlbumsQuery(user);
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAddAlbum = () => {
@@ -13,25 +15,24 @@ function AlbumsList({ user }) {
   };
 
   let content;
-  if (isLoading) {
+  if (isFetching) {
     content = <Skeleton times={3} />;
   } else if (error) {
     content = <div>Error loading albums.</div>;
   } else {
-    content = data.map((album) => {
-      const header = <div>{album.title}</div>;
-
-      return (
-        <ExpandablePanel key={album.id} header={header}>
-          List of photos in the album
-        </ExpandablePanel>
-      );
+    content = data?.map((album) => {
+      return <AlbumListItem key={album.id} album={album} />;
     });
   }
+
   return (
     <div>
-      <div> Albums for </div>
-      <Button onClick={handleAddAlbum}> + Add Album</Button>
+      <div className="m-2 flex flex-row items-center justify-between">
+        <h3 className="text-lg font-bold">Albums for {user.name}</h3>
+      </div>
+      <Button loading={results.isFetching} onClick={handleAddAlbum}>
+        + Add Album
+      </Button>
       {content}
     </div>
   );
