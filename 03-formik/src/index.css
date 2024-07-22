@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: auto;
+  align-items: start;
+
+}
+
+.formControl {
+ 
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  justify-content: start;
+  gap: 10px
+  padding: 10px;
+  margin: 10px;
+}
+
+.formControl > label {
+  grid-column: 1 / span 2;
+   
+}
+
+.warning {
+  color: red;
+}

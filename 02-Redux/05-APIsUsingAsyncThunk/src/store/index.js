@@ -8,9 +8,8 @@ export const store = configureStore({
     users: usersReducer,
     [albumsApi.reducerPath]: albumsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(albumsApi.middleware);
-  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(albumsApi.middleware),
 });
 
 setupListeners(store.dispatch);

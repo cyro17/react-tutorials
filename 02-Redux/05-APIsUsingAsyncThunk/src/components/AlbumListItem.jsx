@@ -10,6 +10,7 @@ function AlbumListItem({ album }) {
   const handleRemoveAlbum = () => {
     removeFn(album);
   };
+
   const header = (
     <>
       <Button
