@@ -2,8 +2,8 @@
 
 import axios from "axios";
 
-export function fetchTodos() {
-    // await new Promise(resolve => setTimeout(resolve, 1000));
+export async function fetchTodos() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
     return axios.get("http://localhost:3001/todos");
 
 }
@@ -19,3 +19,10 @@ export function fetchTodos() {
 //     todos.push(todo);
 //     return newTodo;
 // }
+
+export async function fetchUser({ queryKey }) {
+    const userId = queryKey[1];
+    console.log(userId);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return axios.get(`https://fakestoreapi.com/products/${userId}`);
+}

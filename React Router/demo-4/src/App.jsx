@@ -4,6 +4,7 @@ import CreateOrder, { createOrderAction } from "./CreateOrder";
 import Home, { fetchPosts } from "./Home";
 import Todo from "./Todo";
 import Error from "./Error";
+import User from "./User";
 
 function AppLayout(){
 
@@ -32,14 +33,28 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: fetchPosts
       },
-      { path: "/order", element: <About /> },
+      {
+        path: "/order",
+        element: <About />
+      },
       {
         path: "/order/new",
         element: <CreateOrder />,
         action: createOrderAction
       },
-      { path: "/order/:id", element: <Cart /> },
-      { path: "/todos", element: <Todo /> },
+      {
+        path: "/order/:id",
+        element: <Cart />
+      },
+      {
+        path: "/todos",
+        element: <Todo />
+      },
+      {
+        path: "/users/:userId", 
+        element: <User/>
+      }
+
     ]
   }
 ]);

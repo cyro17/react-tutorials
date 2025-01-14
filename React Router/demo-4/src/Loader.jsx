@@ -1,11 +1,20 @@
 
+import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
 
-export default function CircularIndeterminate() {
+
+export default function Loader() {
+  
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CircularProgress />
-    </Box>
+    <div>
+      {/* <Button onClick={handleOpen}></Button> */}
+      <Backdrop
+        sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+        open={ true}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    </div>
   );
 }
