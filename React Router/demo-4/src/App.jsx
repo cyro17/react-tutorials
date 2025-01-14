@@ -5,6 +5,7 @@ import Home, { fetchPosts } from "./Home";
 import Todo from "./Todo";
 import Error from "./Error";
 import User from "./User";
+import "./App.css";
 
 function AppLayout(){
 

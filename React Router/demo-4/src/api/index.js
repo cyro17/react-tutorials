@@ -26,3 +26,7 @@ export async function fetchUser({ queryKey }) {
     await new Promise(resolve => setTimeout(resolve, 1000));
     return axios.get(`https://fakestoreapi.com/products/${userId}`);
 }
+
+export async function postTodo(todo) {
+    return axios.post("http://localhost:3001/todos", todo)
+}

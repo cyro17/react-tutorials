@@ -1,21 +1,23 @@
-import { useQuery } from "@tanstack/react-query";
-import { fetchTodos } from "../api";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { fetchTodos, postTodo } from "../api";
 
-
-export const useTodosData = (onSuccess, onError) => {
+export const useTodosData = () => {
     return useQuery({
         queryKey: ["todos"],
         queryFn: fetchTodos,
         cacheTime: 5000,
         staleTime: 3000,
-        // refetchInterval: 2000,
-        // refetchIntervalInBackground: true,
-        onSuccess,
-        onError,
+        onSuccess: () => console.log("success"),
+        onError: () => console.log("error"),
         select: (data) => {
             const todos = data.data?.map(todo => todo.title);
             return todos;
         }
-        // enabled: false
+    });
+}
+
+export const useAddTodoData = () => {
+    return useMutation({
+        mutationFn: postTodo,
     });
 }
