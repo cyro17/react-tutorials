@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchTodos, postTodo } from "../api";
 
 export const useTodosData = () => {
@@ -17,7 +17,17 @@ export const useTodosData = () => {
 }
 
 export const useAddTodoData = () => {
+    const queryclient = useQueryClient();
     return useMutation({
         mutationFn: postTodo,
+        onSuccess: (data) => {
+            // queryclient.invalidateQueries("todos")
+            queryclient.setQueryData('todos', (oldData) => {
+                return {
+                    ...oldData,
+                    data: [...oldData, data.data]
+                }
+            })
+        }
     });
 }

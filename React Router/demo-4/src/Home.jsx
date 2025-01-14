@@ -10,10 +10,8 @@ export default function Home(){
     <>
       <div>
         <Link to="/order/new">New Order</Link>
-        <Link to="/todos">Todos</Link>
-        
+        <Link to="/todos">Todos</Link> 
       </div>
-
       <div>
             Items List
         <ul>
@@ -26,7 +24,7 @@ export default function Home(){
   )
 }
 
-export async function fetchPosts() {
+export const fetchPosts = async ()=> {
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
     return data;

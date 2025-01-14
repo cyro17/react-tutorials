@@ -8,20 +8,11 @@ import User from "./User";
 import "./App.css";
 
 function AppLayout(){
-
   return (
     <div>
       Layout Page
       <Outlet/>
     </div> );
-}
-
-function About(){
-  return <div>About Page</div>
-}
-
-function Cart(){
-  return <div>Cart Page</div>
 }
 
 const router = createBrowserRouter([
@@ -35,17 +26,9 @@ const router = createBrowserRouter([
         loader: fetchPosts
       },
       {
-        path: "/order",
-        element: <About />
-      },
-      {
         path: "/order/new",
         element: <CreateOrder />,
         action: createOrderAction
-      },
-      {
-        path: "/order/:id",
-        element: <Cart />
       },
       {
         path: "/todos",
@@ -55,7 +38,6 @@ const router = createBrowserRouter([
         path: "/users/:userId", 
         element: <User/>
       }
-
     ]
   }
 ]);
@@ -66,4 +48,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
