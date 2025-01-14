@@ -9,6 +9,13 @@ export const useUserData = (onSuccess, onError, userId) => {
         cacheTime: 5000,
         fetchTime: 3000,
         onSuccess,
-        onError
+        onError,
+        select: (data) => {
+            // console.log(data);
+            return {
+                id: data.data.id,
+                title: data.data.title,
+            }
+        }
     })
 }
